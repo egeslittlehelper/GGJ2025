@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6125173218059422504}
   - component: {fileID: 1672828441122546317}
   - component: {fileID: 8750809910620531058}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CorruptLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,3 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transform: {fileID: 862656082710376585}
+  enemy: {fileID: 7162839450203032961, guid: 2a740a1e90e5b064e9657b3fa747018c, type: 3}

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CorruptLine : MonoBehaviour
 {
-    [SerializeField] Transform transform;
+    [SerializeField] public Transform transform;
     [SerializeField] GameObject enemy;
     // Start is called before the first frame update
     void Start()
     {
-        transform = this.GetComponent<Transform>();
-        Instantiate(enemy, transform.position - new Vector3(+2.5f, 0, 0), transform.rotation);
+        transform = GetComponent<Transform>();
+        Instantiate(enemy, transform.position + new Vector3(+2.5f, 0, 0), transform.rotation);
     }
 
     // Update is called once per frame

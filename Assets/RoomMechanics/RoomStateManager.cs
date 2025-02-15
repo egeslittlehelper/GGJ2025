@@ -12,14 +12,12 @@ public class RoomStateManager : MonoBehaviour
 
     public SpriteRenderer sr;
     [SerializeField] public CorruptLine line;
-    public Transform CameraTransform;
 
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         //line = GetComponent<CorruptLine>();
-        //CameraTransform = sr.transform;
         curState = NormalState;
         curState.enterState(this);
     }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player_Movement : MonoBehaviour
 {
     [SerializeField] float Speed = 10f;
+    [SerializeField] float DriftSpeed = 8f;
+
     [SerializeField] Rigidbody2D rb2d;
     [SerializeField] Vector3 _movement;
     [SerializeField] Animator animator;
@@ -29,14 +31,14 @@ public class Player_Movement : MonoBehaviour
         else if (moveInput < 0)
             spriteRenderer.flipX = true; // Face left
 
-        _movement = new Vector3(moveInput,0, Input.GetAxis("Vertical")).normalized;
+        _movement = new Vector3(moveInput,Input.GetAxis("Vertical"),0 ).normalized;
     }
     private void FixedUpdate()
     {
         moveCharacter(_movement);
     }
     void moveCharacter(Vector2 direction) 
-    {   rb2d.velocity = direction * Speed;
+    {   rb2d.velocity = direction * Speed - new Vector2( DriftSpeed,0);
         animator.SetFloat("Movement", Mathf.Abs(direction.x));
     }
 }

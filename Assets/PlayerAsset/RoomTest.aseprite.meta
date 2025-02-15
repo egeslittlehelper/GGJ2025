@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fb308e2f5f440d94d862f245943c59eb
+guid: 681ecbc275a66414f8093db72da49760
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -32,10 +32,10 @@ ScriptedImporter:
     sRGBTexture: 1
     spriteMode: 2
     spriteExtrude: 1
-    spriteMeshType: 1
+    spriteMeshType: 0
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 80
+    spritePixelsToUnits: 8
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638752278459263614
+  platformSettingsDirtyTick: 638752379387904790
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Sprite-0002
+  - name: RoomTest
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -130,9 +130,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 80
-      height: 128
-    spriteID: 6c8605ef6735876458b7e220a2861db2
+      width: 60
+      height: 96
+    spriteID: 73f4dc382f8eaf7499456ee6e2e9da5d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,18 +142,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: Sprite-0002_0
+  - name: RoomTest_0
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 80
-      height: 128
-    spriteID: d42274250bbe83b47a2468e61770fae9
+      width: 40
+      height: 64
+    spriteID: 866bb59671d20574c82b711d8c55d252
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -164,21 +164,21 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: -572920020
-    name: Sprite-0002
+    guid: 1678525673
+    name: RoomTest
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Sprite-0002
+    - name: RoomTest
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
-        width: 80
-        height: 128
-      spriteId: 6c8605ef6735876458b7e220a2861db2
+        width: 40
+        height: 64
+      spriteId: 73f4dc382f8eaf7499456ee6e2e9da5d
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -198,7 +198,7 @@ ScriptedImporter:
     overridden: 0
     ignorePlatformSupport: 0
     maxTextureSize: 2048
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -221,4 +221,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 80, y: 128}
+  canvasSize: {x: 40, y: 64}

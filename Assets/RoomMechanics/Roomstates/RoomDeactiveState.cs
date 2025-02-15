@@ -11,7 +11,7 @@ public class RoomDeactiveState : RoomBaseState
 
     public override void UpdateState(RoomStateManager room)
     {
-        if (room.transform.position.x > room.CameraTransform.position.x)
+        if (room.transform.position.x > room.line.transform.position.x)
         {
             room.switchState(room.NormalState);
         }
