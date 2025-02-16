@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoomStateManager : MonoBehaviour
 {
-    [SerializeField] RoomBaseState curState;
+    [SerializeField] public RoomBaseState curState;
     public RoomDeactiveState deactiveState = new RoomDeactiveState();
     public RoomEnemyState enemyState = new RoomEnemyState();
     public RoomNormalState NormalState = new RoomNormalState();

@@ -6,12 +6,15 @@ using UnityEngine.Pool;
 public class Room : MonoBehaviour
 {
     [SerializeField] float Speed = 2f;
+    [SerializeField] private float destroyTimer = 3f;
     [SerializeField] public Transform transform;
     [SerializeField] public RoomStateManager RSM;
     [SerializeField] public RoomGenerator _roomGenerator;
     [SerializeField] Vector3 _movement;
 
     private ObjectPool<Room> _pool;
+
+    private Coroutine _deactivateRoomAfterCoroutine;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +36,10 @@ public class Room : MonoBehaviour
     private void FixedUpdate()
     {
         move();
+        if(RSM.curState == RSM.deactiveState)
+        {
+            _deactivateRoomAfterCoroutine = StartCoroutine(DeactivateBulletAfterTime());
+        }
     }
     public void SetPool(ObjectPool<Room> pool)
     {
@@ -49,5 +56,16 @@ public class Room : MonoBehaviour
     {
         transform.position = new Vector3( transform.position.x + Speed * Time.deltaTime,transform.position.y,transform.position.z);
 
+    }
+    private IEnumerator DeactivateBulletAfterTime()
+    {
+        float elapsedTime = 0f;
+        while(elapsedTime < destroyTimer)
+        {
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        _pool.Release(this);
+        
     }
 }

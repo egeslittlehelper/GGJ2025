@@ -10,16 +10,19 @@ public class RoomGenerator : MonoBehaviour
     public ObjectPool<Room> _pool;
 
     //public Room[] rooms;
-    [SerializeField] public int n = 30;
+    [Header ("Room Settings")]
+    [SerializeField] public float roomFrequency = 1.0f;
+    [SerializeField] public int initalSize = 30;
     [SerializeField] public int maxSize = 100;
 
+    [Header("Related Objects")]
     [SerializeField] Room _room;
     [SerializeField] Transform _transform;
     [SerializeField] public Vector3 RoomspawnPoint;
 
     private void Awake()
     {
-        _pool = new ObjectPool<Room>( CreateRoom, OnTakeRoomFromPool, OnReturnRoomToPool, OnDestroyRoom, true, n, maxSize);
+        _pool = new ObjectPool<Room>( CreateRoom, OnTakeRoomFromPool, OnReturnRoomToPool, OnDestroyRoom, true, initalSize, maxSize);
       
         RoomspawnPoint = transform.position;
 
@@ -27,7 +30,7 @@ public class RoomGenerator : MonoBehaviour
     }
     private void setUpRoom()
     {
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < initalSize; i++)
         {
             _pool.Get();
             RoomspawnPoint = RoomspawnPoint + new Vector3(5, 0, 0);
@@ -35,6 +38,12 @@ public class RoomGenerator : MonoBehaviour
     }
     private void Update()
     {
+       
+    }
+
+    private void generateRoom()
+    {
+        _pool.Get();
     }
 
     private Room CreateRoom()
