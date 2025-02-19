@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5012695572436542358}
   - component: {fileID: 7878412643885392192}
   - component: {fileID: 5403467419568206036}
+  - component: {fileID: 5345563622727763959}
   - component: {fileID: 8464816497246938241}
   - component: {fileID: 1343049188822879430}
   - component: {fileID: 2329219580308056563}
@@ -33,7 +34,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -102,8 +103,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -5
+  destroyTimer: 3
   transform: {fileID: 3549739036023967677}
   RSM: {fileID: 5403467419568206036}
+  RTM: {fileID: 5345563622727763959}
   _roomGenerator: {fileID: 1223057243357209786, guid: eb2530a02c70a5e4a97968e1ba3ae775, type: 3}
   _movement: {x: 0, y: 0, z: 0}
 --- !u!114 &5403467419568206036
@@ -120,6 +123,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sr: {fileID: 5012695572436542358}
   line: {fileID: 8750809910620531058, guid: 32d11a4547f86864a9448ccaaa346614, type: 3}
+--- !u!114 &5345563622727763959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6660969416949974730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad68bfab78c7eb418c4f0541862169f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 5012695572436542358}
+  RoomWidth: 5
+  RoomHeight: 8
 --- !u!61 &8464816497246938241
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class Room : MonoBehaviour
     [SerializeField] private float destroyTimer = 3f;
     [SerializeField] public Transform transform;
     [SerializeField] public RoomStateManager RSM;
+    [SerializeField] public RoomTypeManager RTM;
     [SerializeField] public RoomGenerator _roomGenerator;
     [SerializeField] Vector3 _movement;
 
@@ -20,6 +21,8 @@ public class Room : MonoBehaviour
     void Start()
     {
         RSM = GetComponent<RoomStateManager>();
+        RTM = GetComponent<RoomTypeManager>();
+
         transform = GetComponent<Transform>();
         _roomGenerator = GetComponent<RoomGenerator>();
     }

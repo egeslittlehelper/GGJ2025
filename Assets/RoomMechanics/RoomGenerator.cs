@@ -32,8 +32,8 @@ public class RoomGenerator : MonoBehaviour
     {
         for (int i = 0; i < initalSize; i++)
         {
-            _pool.Get();
-            RoomspawnPoint = RoomspawnPoint + new Vector3(5, 0, 0);
+            Room temp = _pool.Get();
+            RoomspawnPoint = RoomspawnPoint + new Vector3(temp.RTM. RoomWidth, 0, 0);
         }
     }
     private void Update()
@@ -46,6 +46,7 @@ public class RoomGenerator : MonoBehaviour
         _pool.Get();
     }
 
+    // Methods for setting up the room pool
     private Room CreateRoom()
     {
         Room room = Instantiate(_room,transform.position,transform.rotation);
