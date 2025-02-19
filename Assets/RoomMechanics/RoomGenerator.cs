@@ -38,7 +38,8 @@ public class RoomGenerator : MonoBehaviour
     }
     private void Update()
     {
-       
+       //TODO
+       //Add a generating method after the inital rooms are generated
     }
 
     private void generateRoom()
